@@ -2,6 +2,12 @@
   "name": "Basic_setup",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "gitadd": "git add .",
+    "sta": "git status",
+    "push": "git push origin master",
+    "ad": "yarn gitadd && yarn sta"
+  },
   "repository": "https://github.com/congviec18120062/basic_setup",
   "author": "H Nam <congviec18120062@gmail.com>",
   "license": "MIT",
