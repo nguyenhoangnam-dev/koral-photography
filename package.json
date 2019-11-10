@@ -2,10 +2,6 @@
   "name": "Basic_setup",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "add": "git add .",
-    "sta": "git status"
-  },
   "repository": "https://github.com/congviec18120062/basic_setup",
   "author": "H Nam <congviec18120062@gmail.com>",
   "license": "MIT",
