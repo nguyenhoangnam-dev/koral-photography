@@ -15,15 +15,20 @@ const htmlReplace = require('gulp-html-replace');
 const sourcemaps = require('gulp-sourcemaps');
 const newer = require('gulp-newer');
 const Fiber = require('fibers');
+const changed = require('gulp-changed');
+const urlAdjuster = require('gulp-css-replace-url');
 
 function style() {
   return src('./src/scss/*.scss')
     .pipe(sourcemaps.init())
-      .pipe(sass({
-        fiber           : Fiber,
-        precision       : 3,
-        errLogToConsole : true
-      }).on('error', sass.logError))
+    .pipe(
+      sass({
+        outputStyle: 'expanded',
+        fiber: Fiber,
+        precision: 3,
+        errLogToConsole: true
+      }).on('error', sass.logError)
+    )
     .pipe(sourcemaps.write('.'))
     .pipe(dest('./src/css'))
     .pipe(browserSync.stream());
@@ -41,7 +46,7 @@ function watch() {
 }
 
 function minifyImage() {
-  return src(['./src/img/*', '!./src/img/**/*.min.*'])
+  return src('./src/img/**/*')
     .pipe(newer('image/'))
     .pipe(image([
       image.gifsicle({interlaced: true}),
@@ -62,54 +67,84 @@ function minifyImage() {
 }
 
 function minifyJs() {
-  return src(['./src/js/**/*.js', '!./src/js/**/*.min.js'])
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
+  return src('./src/js/**/*.js')
+    .pipe(changed('./docs/js'))
+    .pipe(
+      babel({
+        presets: ['@babel/env']
+      })
+    )
     .pipe(uglify())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(dest('./docs/js'))
+    .pipe(
+      rename({
+        suffix: '.min'
+      })
+    )
+    .pipe(dest('./docs/js'));
 }
 
 function minifyCss() {
   return src(['./src/scss/*.scss'])
+    .pipe(changed('./docs/css'))
     .pipe(sourcemaps.init())
-    .pipe(sass({
-        fiber           : Fiber,
-        imagePath       : '/images/',
-        precision       : 3,
-        errLogToConsole : true
-      }).on('error', sass.logError))
-      .pipe(autoprefixer())
-      .pipe(csso())
-      .pipe(rename({
+    .pipe(
+      sass({
+        outputStyle: 'expanded',
+        fiber: Fiber,
+        imagePath: '/images/',
+        precision: 3,
+        errLogToConsole: true
+      }).on('error', sass.logError)
+    )
+    .pipe(
+      urlAdjuster({
+        replace: ['../../', '../']
+      })
+    )
+    .pipe(autoprefixer())
+    .pipe(csso())
+    .pipe(
+      rename({
         suffix: '.min'
-      }))
+      })
+    )
     .pipe(sourcemaps.write('.'))
-    .pipe(size({
-      showFiles: true
-    }))
-    .pipe(dest('./docs/css'))
+    .pipe(
+      size({
+        showFiles: true
+      })
+    )
+    .pipe(dest('./docs/css'));
 }
 
 function minifyHtml() {
   return src('./src/**/*.html')
-    .pipe(htmlReplace({
-      'css': 'css/main.min.css',
-      'js': 'js/index.min.js'
-    }))
-    .pipe(htmlmin({
-      collapseWhitespace: true,
-      removeComments: true
-    }))
-    .pipe(dest('./docs'))
+    .pipe(changed('./docs'))
+    .pipe(
+      htmlReplace({
+        css: 'css/main.min.css',
+        js: 'js/index.min.js'
+      })
+    )
+    .pipe(
+      htmlmin({
+        collapseWhitespace: true,
+        removeComments: true
+      })
+    )
+    .pipe(dest('./docs'));
 }
 
 function fontCopy() {
   return src('./src/font/*')
+    .pipe(changed('./docs/font'))
     .pipe(dest('./docs/font'));
+}
+
+function libCopy() {
+  return src('./src/lib/**/*')
+    .pipe(changed('./docs/lib'))
+	.pipe(dest('./docs/lib'));
 }
 
 function cleanDist() {
@@ -128,6 +163,11 @@ exports.cleanDist = cleanDist;
 exports.default = series(cleanDist, parallel(
   minifyImage, parallel(
     minifyJs, parallel(
-      minifyCss, parallel(minifyHtml, fontCopy))
+      minifyCss, parallel(
+	    minifyHtml, parallel(
+		  fontCopy, libCopy
+	    )
+	  )
+	)
   )
 ));
