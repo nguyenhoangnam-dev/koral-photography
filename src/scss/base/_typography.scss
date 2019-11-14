@@ -1,9 +1,55 @@
 @font-face {
-  font-family: "Roboto";
-  src: url('../font/Roboto-Medium.ttf');
+	font-family: "Crimson text";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../../font/CrimsonText-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Rale";
-  src: url('../font/Raleway-Bold.ttf');
+	font-family: "Crimson text";
+	font-style: normal;
+	font-weight: 600;
+	src: url("../../font/CrimsonText-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Crimson text";
+	font-style: normal;
+	font-weight: 700;
+	src: url("../../font/CrimsonText-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 500;
+	src: url("../../font/Roboto-Medium.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Work sans";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../../font/WorkSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Work sans";
+	font-style: normal;
+	font-weight: 600;
+	src: url("../../font/WorkSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Work sans";
+	font-style: normal;
+	font-weight: 700;
+	src: url("../../font/WorkSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Nothing you could do";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../../font/NothingYouCouldDo-Regular.ttf") format("truetype");
 }

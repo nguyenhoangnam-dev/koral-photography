@@ -1,0 +1,51 @@
+.title {
+  font-family: "Crimson text", Arial, sans-serif;
+  font-weight: 600;
+
+  &_small {
+    font-size: 30px;
+  }
+
+  &_big {
+    font-size: 60px;
+  }
+}
+
+.crimson {
+  font-family: "Crimson text", Arial, sans-serif;
+
+  &_regular {
+    font-weight: 400;
+  }
+
+  &_semi-bold {
+    font-weight: 600;
+  }
+
+  &_bold {
+    font-weight: 700;
+  }
+}
+
+.work {
+  font-family: "Work sans", Arial, sans-serif;
+
+  &_content {
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  &_semi-bold {
+    font-weight: 600;
+  }
+
+  &_bold {
+    font-weight: 700;
+  }
+}
+
+.sign {
+  font-family: "Nothing you could do";
+  font-weight: 400;
+  font-size: 30px;
+}
