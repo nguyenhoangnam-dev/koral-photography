@@ -1,45 +1,53 @@
 .title {
-  font-family: "Crimson text", Arial, sans-serif;
-  font-weight: 600;
-
   &_small {
+    font-family: "Crimson text", Arial, sans-serif;
+    font-weight: 600;
     font-size: 30px;
   }
 
   &_big {
+    font-family: "Crimson text", Arial, sans-serif;
+    font-weight: 600;
     font-size: 60px;
   }
 }
 
-.crimson {
-  font-family: "Crimson text", Arial, sans-serif;
+.roboto {
+  font-family: "Roboto";
+  font-weight: 500;
+}
 
+.crimson {
   &_regular {
+    font-family: "Crimson text", Arial, sans-serif;
     font-weight: 400;
   }
 
   &_semi-bold {
+    font-family: "Crimson text", Arial, sans-serif;
     font-weight: 600;
   }
 
   &_bold {
+    font-family: "Crimson text", Arial, sans-serif;
     font-weight: 700;
   }
 }
 
 .work {
-  font-family: "Work sans", Arial, sans-serif;
-
   &_content {
+    font-family: "Work sans", Arial, sans-serif;
     font-weight: 400;
     font-size: 14px;
   }
 
   &_semi-bold {
+    font-family: "Work sans", Arial, sans-serif;
     font-weight: 600;
   }
 
   &_bold {
+    font-family: "Work sans", Arial, sans-serif;
     font-weight: 700;
   }
 }

@@ -1,0 +1,8 @@
+@function gridCell($position) {
+  $col-start: str-slice($position, 2, 2);
+  $col-end: str-slice($position, 4, 4);
+  $row-start: str-slice($position, 6, 6);
+  $row-end: str-slice($position, 8, 8);
+  $grid-area: $row-start + " / " + $col-start + " / " + $row-end + " / " + $col-end;
+  @return unquote($grid-area);
+}

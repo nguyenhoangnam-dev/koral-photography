@@ -1,0 +1,41 @@
+.introduce {
+  background-image: url("../../img/studio-2.jpg");
+  height: 115%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+
+  &_background {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100%;
+  }
+
+  &_contain {
+    width: 32%;
+  }
+
+  &_title {
+    color: $_fc;
+    padding-bottom: 15px;
+  }
+
+  &_sub-title {
+    color: $_db;
+    font-size: 22px;
+    line-height: 29px;
+    padding-bottom: 38px;
+  }
+
+  &_content {
+    color: $_e8;
+    font-size: 14px;
+    line-height: 22px;
+    padding-bottom: 16px;
+  }
+
+  &_sign {
+    color: $white;
+    padding-top: 46px;
+  }
+}

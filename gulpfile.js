@@ -46,7 +46,7 @@ function watch() {
 }
 
 function minifyImage() {
-  return src('./src/img/**/*')
+  return src(['./src/img/**/*', '!./src/img/desktop.ini'])
     .pipe(newer('image/'))
     .pipe(image([
       image.gifsicle({interlaced: true}),

@@ -1,0 +1,138 @@
+.form {
+  background-image: url("../../img/studio-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &-center {
+    padding: {
+      top: 115px;
+      bottom:100px;
+    }
+    width: 772px;
+  }
+
+  &_top {
+    font-size: 18px;
+    padding-bottom: 24px;
+    color: $_c7;
+  }
+
+  &_title {
+    font-size: 48px;
+    color: $_f9;
+  }
+
+  &_fill {
+    margin: auto;
+    background-color: rgba(100, 100, 100, 0.3);
+    margin-top: 65px;
+    &-center {
+      padding: {
+        left: 38px;
+        right: 38px;
+        top: 48px;
+        bottom: 38px;
+      }
+
+    }
+
+    &-grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 36px 36px;
+    }
+  }
+
+  &_item {
+    &-title {
+      font-size: 14px;
+      color: $_f2;
+      padding-bottom: 16px;
+    }
+
+    &-input {
+      input {
+        border: none;
+        height: 44px;
+        width: calc(100% - 20px);
+        background-color: $_dd;
+
+        &:focus{
+          background-color: $white;
+        }
+      }
+
+      input[type="text"] {
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 14px;
+        color: $fill;
+        padding-left: 20px;
+
+      }
+
+      textarea {
+        width: calc(100% - 20px);
+        height: 130px-40px;
+        outline: none;
+        padding: {
+          top: 20px;
+          bottom: 20px;
+          left: 16px;
+        }
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 14px;
+        color: $fill;
+        background-color: $_dd;
+
+        &:focus{
+          background-color: $white;
+        }
+        resize: none;
+      }
+    }
+  }
+
+  &_button {
+    margin: auto;
+    margin-top: 50px;
+    color: $white;
+    border: 1px solid $white;
+    font-size: 14px;
+    width: 152px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 44px;
+  }
+}
+
+.opacity {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.c1_2r1_2 {
+  grid-area: gridCell("c1_2r1_2");
+}
+
+.c2_3r1_2 {
+  grid-area: gridCell("c2_3r1_2");
+}
+
+.c1_2r2_3 {
+  grid-area: gridCell("c1_2r2_3");
+}
+
+.c2_3r2_3 {
+  grid-area: gridCell("c2_3r2_3");
+}
+
+.c1_3r3_4 {
+  grid-area: gridCell("c1_3r3_4");
+}

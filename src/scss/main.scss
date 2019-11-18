@@ -1,6 +1,7 @@
 // base property
 @import 'base/reset';
 @import 'base/typography';
+@import 'base/text';
 
 // helper for other file
 @import 'helpers/functions';
@@ -12,9 +13,14 @@
 @import 'components/content';
 @import 'components/button';
 @import 'components/dropdown';
+@import 'components/flex';
 
 // layout of web
 @import 'layout/grid';
 @import 'layout/header';
+@import 'layout/banner';
+@import 'layout/introduce';
+@import 'layout/profile';
+@import 'layout/image';
+@import 'layout/form';
 @import 'layout/footer';
-

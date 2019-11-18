@@ -1,0 +1,87 @@
+.profile {
+  padding: {
+    top: 105px;
+    bottom: 150px;
+  }
+
+  &_center {
+    width: 1200px;
+  }
+
+  &_option {
+    width: 270px;
+
+    &-item {
+      height: 79px;
+      border: {
+        right: 1px solid #edeef1;
+      }
+    }
+
+    &-icon {
+      img {
+        width: 30px;
+      }
+    }
+
+    &-name {
+      font-size: 25px;
+      line-height: 40px;
+      color: #0A0B26;
+      padding-left: 25px;
+    }
+
+    .border-top {
+      border: {
+        top: 1px solid #edeef1;
+      }
+    }
+  }
+
+  &_content {
+    width: 387px;
+    padding: {
+      left: 55px;
+      right: 55px;
+    }
+
+    &-title {
+      font-size: 60px;
+      color: #0A0B26;
+      padding-bottom: 60px;
+      line-height: 40px;
+    }
+
+    &-content {
+      font-size: 14px;
+      line-height: 22px;
+      padding-bottom: 16px;
+    }
+
+    &-button {
+      margin-top: 30px;
+      padding: {
+        top: 12px;
+        bottom: 12px;
+        left: 26px;
+        right: 26px;
+      }
+      border: 1px solid black;
+      display: inline-block;
+      font-size: 14px;
+
+      &:hover {
+        background-color: black;
+        color: $white;
+      }
+    }
+  }
+
+  &_portrait {
+    width: 392px;
+
+    img {
+      width: 392px;
+    }
+  }
+}

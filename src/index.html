@@ -12,8 +12,8 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="header_flex">
+  <header class="header flex_column-center">
+    <div class="header_flex flex_row-between">
       <div class="header_logo">
         <img src="img/logo-koral-light.png" alt="">
       </div>
@@ -23,104 +23,136 @@
     </div>
   </header>
   <div class="banner">
-    <div class="banner_title crimson_regular">
-      <div class="banner_title-content">We are Koral</div>
-      <div class="banner_title-content">Photography Agency</div>
+    <div class="banner_carousel">
+      <div class="banner_carousel-item" id="one">
+        <div class="banner_background-opacity flex_column-center">
+          <div class="flex_row-center">
+            <div class="flex_column">
+              <div class="banner_title crimson_regular">
+                <div class="banner_title-content">We are Koral</div>
+                <div class="banner_title-content">Photography Agency</div>
+              </div>
+              <div class="banner_button work_content">MORE ABOUT OUR AGENCY</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner_carousel-item none" id="two">
+        <div class="banner_background-opacity flex_column-center">
+          <div class="flex_row-center">
+            <div class="flex_column">
+              <div class="banner_title crimson_regular">
+                <div class="banner_title-content">We love the</div>
+                <div class="banner_title-content">Wedding Day</div>
+              </div>
+              <div class="banner_button work_content">MORE ABOUT OUR AGENCY</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner_carousel-item none" id="three"></div>
+      <div class="banner_carousel-item none" id="four"></div>
     </div>
-    <div class="banner_button">MORE ABOUT OUR AGENCY</div>
-    <nav class="banner_nav">
-      <div class="banner_item">
-        <div class="banner_item-left">
-          <img src="img/model-5-50x100.jpg" alt="">
+    <div class="banner_bottom">
+      <nav class="banner_nav flex_row-center roboto">
+        <div class="banner_item flex">
+          <div class="banner_item-left" id="nav-one"></div>
+          <div class="banner_item-right">
+            <div class="number">01</div>
+            <div class="string">Portrait Photography</div>
+          </div>
         </div>
-        <div class="banner_item-right">
-          <div class="number">01</div>
-          <div class="string">Portrait Photography</div>
+        <div class="banner_item flex">
+          <div class="banner_item-left" id="nav-two"></div>
+          <div class="banner_item-right">
+            <div class="number">02</div>
+            <div class="string">Portrait Photography</div>
+          </div>
         </div>
-      </div>
-      <div class="banner_item">
-        <div class="banner_item-left">
-          <img src="img/wedding3-50x100.jpg" alt="">
+        <div class="banner_item flex">
+          <div class="banner_item-left" id="nav-three"></div>
+          <div class="banner_item-right">
+            <div class="number">03</div>
+            <div class="string">Portrait Photography</div>
+          </div>
         </div>
-        <div class="banner_item-right">
-          <div class="number">02</div>
-          <div class="string">Portrait Photography</div>
+        <div class="banner_item flex">
+          <div class="banner_item-left" id="nav-four"></div>
+          <div class="banner_item-right">
+            <div class="number">04</div>
+            <div class="string">Portrait Photography</div>
+          </div>
         </div>
-      </div>
-      <div class="banner_item">
-        <div class="banner_item-left">
-          <img src="img/product1-50x100.jpg" alt="">
-        </div>
-        <div class="banner_item-right">
-          <div class="number">03</div>
-          <div class="string">Portrait Photography</div>
-        </div>
-      </div>
-      <div class="banner_item">
-        <div class="banner_item-left">
-          <img src="img/realestate-50x100.jpg" alt="">
-        </div>
-        <div class="banner_item-right">
-          <div class="number">04</div>
-          <div class="string">Portrait Photography</div>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
     <div class="banner_arrow-down">
       <img src="img/icon/download-arrow.svg" alt="">
     </div>
   </div>
+  </div>
   <div class="introduce">
-    <div class="introduce_center">
-      <div class="introduce_title title_small">Koral Studio</div>
-      <div class="introduce_sub-title crimson_regular">
-        I put all my passion on all projects i work because at the
-        end i love my job and love to see my clients happy.
+    <div class="introduce_background flex_column-center">
+      <div class="introduce_center flex_row-center">
+        <div class="introduce_contain">
+          <div class="introduce_title title_small">Koral Studio</div>
+          <div class="introduce_sub-title crimson_regular">
+            I put all my passion on all projects i work because at the
+            end i love my job and love to see my clients happy.
+          </div>
+          <div class="introduce_content work_content">
+            Efficiently productize interoperable expertise via plug-and-play
+            markets. Proactively orchestrate 2.0 customer service rather than
+            intuitive data. Distinctively scale sticky results with resource
+            sucking testing procedures.
+          </div>
+          <div class="introduce_content work_content">
+            Competently disintermediate performance based core competencies
+            without standardized results.
+          </div>
+          <div class="introduce_sign sign">Amanda Logan</div>
+        </div>
       </div>
-      <div class="introduce_content crimson_regular">
-        Efficiently productize interoperable expertise via plug-and-play
-        markets. Proactively orchestrate 2.0 customer service rather than
-        intuitive data. Distinctively scale sticky results with resource
-        sucking testing procedures.
-      </div>
-      <div class="introduce_content crimson_regular">
-        Competently disintermediate performance based core competencies
-        without standardized results.
-      </div>
-      <div class="introduce_sign sign">Amanda Logan</div>
     </div>
   </div>
-  <div class="profile">
-    <div class="profile-center">
+  <div class="profile flex_row-center">
+    <div class="profile-center flex_row-center">
       <div class="profile_option">
-        <div class="profile_option-item">
-          <div class="profile_option-icon">
-            <img src="img/icon/hipster.svg" alt="">
+        <div class="profile_option-item flex_column-center">
+          <div class="flex">
+            <div class="profile_option-icon">
+              <img src="img/icon/hipster.svg" alt="">
+            </div>
+            <div class="profile_option-name crimson_bold">Portraits</div>
           </div>
-          <div class="profile_option-name">Portraits</div>
         </div>
-        <div class="profile_option-item">
-          <div class="profile_option-icon">
-            <img src="img/icon/like.svg" alt="">
+        <div class="profile_option-item flex_column-center border-top">
+          <div class="flex">
+            <div class="profile_option-icon">
+              <img src="img/icon/like.svg" alt="">
+            </div>
+            <div class="profile_option-name crimson_bold">Weddings</div>
           </div>
-          <div class="profile_option-name">Weddings</div>
         </div>
-        <div class="profile_option-item">
-          <div class="profile_option-icon">
-            <img src="img/icon/shirt.svg" alt="">
+        <div class="profile_option-item flex_column-center border-top">
+          <div class="flex">
+            <div class="profile_option-icon">
+              <img src="img/icon/shirt.svg" alt="">
+            </div>
+            <div class="profile_option-name crimson_bold">Products</div>
           </div>
-          <div class="profile_option-name">Products</div>
         </div>
-        <div class="profile_option-item">
-          <div class="profile_option-icon">
-            <img src="img/icon/armchair.svg" alt="">
+        <div class="profile_option-item flex_column-center border-top">
+          <div class="flex">
+            <div class="profile_option-icon">
+              <img src="img/icon/armchair.svg" alt="">
+            </div>
+            <div class="profile_option-name crimson_bold">Real Estate</div>
           </div>
-          <div class="profile_option-name">Real Estate</div>
         </div>
       </div>
       <div class="profile_content">
-        <div class="profile_content-title">We're Koral</div>
-        <div class="profile_content-content">
+        <div class="profile_content-title crimson_semi-bold">We're Koral</div>
+        <div class="profile_content-content work_content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
           enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -128,19 +160,19 @@
           in reprehenderit in voluptate velit esse cillum dolore eu fugiat
           nulla pariatur.
         </div>
-        <div class="profile_content-content">
+        <div class="profile_content-content work_content">
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
           officia deserunt mollit anim id est laborum.
         </div>
-        <div class="profile_content-button">GET KORAL</div>
+        <div class="profile_content-button crimson_bold">GET KORAL</div>
       </div>
       <div class="profile_portrait">
         <img src="img/photo12.jpg" alt="">
       </div>
     </div>
   </div>
-  <div class="image">
-    <div class="col">
+  <div class="image flex">
+    <div class="col flex_column">
       <div class="row">
         <img src="img/photo2.jpg" alt="">
       </div>
@@ -154,7 +186,7 @@
         <img src="img/realestate.jpg" alt="">
       </div>
     </div>
-    <div class="col">
+    <div class="col flex_column">
       <div class="row">
         <img src="img/product1.jpg" alt="">
       </div>
@@ -168,7 +200,7 @@
         <img src="img/studio-2.jpg" alt="">
       </div>
     </div>
-    <div class="col">
+    <div class="col flex_column">
       <div class="row">
         <img src="img/wedding1.jpg" alt="">
       </div>
@@ -216,39 +248,51 @@
     <div class="client_name">Jack Shapeard</div>
   </div>
   <div class="form">
-    <div class="form-center">
-      <div class="form_top work_semi-bold align-center">
-        We have clients all over the world
-      </div>
-      <div class="form_title crimson_semi-bold align-center">
-        Request a Quote Today!
-      </div>
-      <div class="form_fill">
-        <div class="form_fill-center">
-          <div class="form_fill-grid">
-            <div class="form_item col_1row_1">
-              <div class="form_item-title"></div>
-              <div class="form_item-input"></div>
+    <div class="opacity">
+      <div class="form-center">
+        <div class="form_top work_semi-bold align-center">
+          We have clients all over the world
+        </div>
+        <div class="form_title crimson_semi-bold align-center">
+          Request a Quote Today!
+        </div>
+        <div class="form_fill">
+          <div class="form_fill-center">
+            <div class="form_fill-grid">
+              <div class="form_item c1_2r1_2">
+                <div class="form_item-title work_semi-bold">Your Name (required)</div>
+                <div class="form_item-input">
+                  <input type="text" name="name">
+                </div>
+              </div>
+              <div class="form_item c2_3r1_2">
+                <div class="form_item-title work_semi-bold">Your Email (required)</div>
+                <div class="form_item-input">
+                  <input type="text" name="email">
+                </div>
+              </div>
+              <div class="form_item c1_2r2_3">
+                <div class="form_item-title work_semi-bold">Subject</div>
+                <div class="form_item-input">
+                  <input type="text" name="subject">
+                </div>
+              </div>
+              <div class="form_item c2_3r2_3">
+                <div class="form_item-title work_semi-bold">Service Desired</div>
+                <div class="form_item-input">
+                  <input type="text" name="service">
+                </div>
+              </div>
+              <div class="form_item c1_3r3_4">
+                <div class="form_item-title work_semi-bold">Your Message</div>
+                <div class="form_item-input">
+                  <textarea name="message" id="" rows="4"></textarea>
+                </div>
+              </div>
             </div>
-            <div class="form_item col_1row_1">
-              <div class="form_item-title"></div>
-              <div class="form_item-input"></div>
+            <div class="form_button crimson_semi-bold">
+              SEND EMAIL
             </div>
-            <div class="form_item col_1row_1">
-              <div class="form_item-title"></div>
-              <div class="form_item-input"></div>
-            </div>
-            <div class="form_item col_1row_1">
-              <div class="form_item-title"></div>
-              <div class="form_item-input"></div>
-            </div>
-            <div class="form_item col_2row_1">
-              <div class="form_item-title"></div>
-              <div class="form_item-input"></div>
-            </div>
-          </div>
-          <div class="form_button">
-            SEND EMAIL
           </div>
         </div>
       </div>

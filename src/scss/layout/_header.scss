@@ -1,0 +1,22 @@
+.header {
+  background-color: black;
+  width: 100%;
+
+  &_flex {
+    padding: {
+      top: 15px;
+      bottom: 10px;
+      left: 30px;
+      right: 30px;
+    }
+  }
+
+  &_logo {
+  }
+
+  &_menu {
+    img {
+      width: 30px;
+    }
+  }
+}

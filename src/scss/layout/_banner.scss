@@ -1,0 +1,161 @@
+.banner {
+  height: 666px;
+  // overflow: hidden;
+  width: 100%;
+  position: relative;
+
+  &_background-opacity {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+  }
+
+  &_carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &-item {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+  }
+
+  &_title {
+    &-content {
+      font-size: 105px;
+      line-height: 100px;
+      color: $white;
+    }
+    padding-bottom: 65px;
+  }
+
+  &_button {
+    height: 40px;
+    font-size: 14px;
+    color: $white;
+    line-height: 40px;
+    text-align: center;
+    width: 230px;
+    border: {
+      width: 1px;
+      style: solid;
+      color: $white;
+    }
+  }
+
+  &_bottom {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+  }
+
+  &_item {
+    margin-right: 40px;
+    padding: {
+      top: 10px;
+      bottom: 5px;
+      right: 10px;
+      left: 10px;
+    }
+    background: rgba(98, 98, 98, 0.2);
+    &-left {
+      height: 60px;
+      width: 60px;
+      overflow: hidden;
+    }
+
+    &-right {
+      width: 90px;
+      padding-right: 40px;
+      padding-left: 15px;
+      color: $white;
+
+      .number {
+        font-size: 12px;
+        color: $white05;
+        padding-bottom: 8px;
+      }
+
+      .string {
+        font-size: 14px;
+        color: $white;
+      }
+    }
+  }
+
+  &_arrow-down {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    animation: {
+      name: example;
+      iteration-count: infinite;
+      duration: 2s;
+      timing-function: ease-in-out;
+    }
+
+    img {
+      width: 25px;
+    }
+  }
+}
+
+@keyframes example {
+  0%   {
+    bottom: 40px;
+  }
+  50%  {
+    bottom: 80px;
+  }
+  100% {
+    bottom: 40px;
+  }
+}
+
+#one {
+  background-image: url("../../img/model-5.jpg");
+}
+
+#nav-one {
+  background-image: url("../../img/model-5-50x100.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#two {
+  background-image: url("../../img/wedding3.jpg");
+}
+
+#nav-two {
+  background-image: url("../../img/wedding3-50x100.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#three {
+  background-image: url("../../img/product1.jpg");
+}
+
+#nav-three {
+  background-image: url("../../img/product1-50x100.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#four {
+  background-image: url("../../img/realestate.jpg");
+}
+
+#nav-four {
+  background-image: url("../../img/realestate-50x100.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.none {
+  display: none;
+}
