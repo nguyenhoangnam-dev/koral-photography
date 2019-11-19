@@ -139,6 +139,11 @@ html, body {
   justify-content: center;
 }
 
+.flex_row-around {
+  display: flex;
+  justify-content: space-around;
+}
+
 .flex_column {
   flex-direction: column;
 }
@@ -461,6 +466,67 @@ html, body {
   transform: scale(1.2);
 }
 
+.client {
+  padding-top: 115px;
+  padding-bottom: 160px;
+  color: #222025;
+  position: relative;
+}
+
+.client_title {
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 75px;
+}
+
+.client_quote {
+  width: 700px;
+  margin: auto;
+  text-align: center;
+  font-size: 15px;
+  line-height: 26px;
+  padding-bottom: 35px;
+}
+
+.client_name {
+  font-size: 15px;
+  text-align: center;
+}
+
+.client_avatar {
+  padding-bottom: 35px;
+}
+
+.client_image {
+  margin-left: 8px;
+  margin-right: 8px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.client_image:hover .client_opacity {
+  display: block;
+}
+
+.client_opacity {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.client .border-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  filter: grayscale(1);
+}
+
 .form {
   background-image: url("../../img/studio-2.jpg");
   background-repeat: no-repeat;
@@ -587,6 +653,61 @@ html, body {
 
 .c1_3r3_4 {
   grid-area: 3 / 1 / 4 / 3;
+}
+
+.footer {
+  background-color: black;
+}
+
+.footer-center {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.footer_img {
+  padding-bottom: 35px;
+}
+
+.footer_img img {
+  width: 25px;
+}
+
+.footer_item {
+  text-align: center;
+}
+
+.footer_item-center {
+  margin-left: 260px;
+  margin-right: 260px;
+}
+
+.footer_title {
+  font-size: 16px;
+  line-height: 21px;
+  color: #F0F0F0;
+  padding-bottom: 30px;
+}
+
+.footer_content {
+  line-height: 22px;
+  color: #C7C7C7;
+  text-align: center;
+}
+
+.caret_button {
+  width: 40px;
+  height: 40px;
+  background-color: #7B7B7B;
+}
+
+.caret_image {
+  width: 40px;
+  height: 40px;
+}
+
+.caret_image img {
+  width: 20px;
+  height: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

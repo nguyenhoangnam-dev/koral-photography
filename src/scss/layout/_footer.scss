@@ -1,0 +1,60 @@
+.footer {
+  background-color: black;
+
+  &-center {
+    padding: {
+      top: 140px;
+      bottom: 140px;
+    }
+  }
+
+  &_img {
+    padding-bottom: 35px;
+
+    img {
+      width: 25px;
+    }
+  }
+
+  &_item {
+    text-align: center;
+
+
+    &-center {
+      margin: {
+        left: 260px;
+        right: 260px;
+      }
+    }
+  }
+
+  &_title {
+    font-size: 16px;
+    line-height: 21px;
+    color: $_f0;
+    padding-bottom: 30px;
+  }
+
+  &_content {
+    line-height: 22px;
+    color: $_c7;
+    text-align: center;
+  }
+}
+
+.caret {
+  &_button {
+    width: 40px;
+    height: 40px;
+    background-color: $_7b;
+  }
+
+  &_image {
+    width: 40px;
+    height: 40px;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
